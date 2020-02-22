@@ -3,8 +3,7 @@ import { RouteConfig, RouteConfigComponentProps } from 'react-router-config';
 import { unnest } from 'ramda';
 
 import { PreloadAction } from './preload';
-
-import { commonRoutes } from '@core/features/common';
+import routes from '@core/routes';
 
 export interface ExtraRouteProps {
   preloadActions?: PreloadAction | PreloadAction[];
@@ -19,4 +18,4 @@ export interface AppRoute extends RouteConfig, ExtraRouteProps {
   component: React.ComponentType<RouteComponentProps> | React.ComponentType;
 }
 
-export const appRoutes = unnest([commonRoutes]) as AppRoute[];
+export const appRoutes = unnest([routes]) as AppRoute[];

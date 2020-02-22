@@ -20,7 +20,6 @@ const defaultConfig: Config = {
   common: {
     env,
     isBrowser,
-    apiUrl: `https://api.github.com/`,
     isDev: process.env.NODE_ENV !== 'production',
     useRender: Boolean(isBrowser && localStorage.getItem('useRender'))
   },
