@@ -55,5 +55,5 @@ app.use((err: string, req: express.Request, res: express.Response, next: express
 });
 
 app.listen(port, () => {
-  console.info(`✅✅✅ Server is running at http://${host}:${port} ✅✅✅`);
+  console.info(`!!! Server is running at http://${host}:${port} !!!`);
 });

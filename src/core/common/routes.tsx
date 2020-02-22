@@ -6,7 +6,7 @@ import { PreloadAction } from './preload';
 
 import { commonRoutes } from '@core/features/common';
 
-export interface ExtraRoureProps {
+export interface ExtraRouteProps {
   preloadActions?: PreloadAction | PreloadAction[];
 }
 
@@ -14,7 +14,7 @@ export interface RouteComponentProps<T = {}> extends RouteConfigComponentProps<T
   routes?: AppRoute[];
 }
 
-export interface AppRoute extends RouteConfig, ExtraRoureProps {
+export interface AppRoute extends RouteConfig, ExtraRouteProps {
   routes?: AppRoute[];
   component: React.ComponentType<RouteComponentProps> | React.ComponentType;
 }

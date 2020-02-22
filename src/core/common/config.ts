@@ -28,4 +28,4 @@ const defaultConfig: Config = {
   production: {}
 };
 
-export const config: AppConfig = merge(defaultConfig.common, defaultConfig[env]);
+export const config = merge(defaultConfig.common, defaultConfig[env]);
