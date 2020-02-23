@@ -1,5 +1,5 @@
 ---
-to: src/core/features/<%= name %>/components/<%= name %>.tsx
+to: src/core/features/<%= name %>/components/<%= h.capitalize(name) %>Container.tsx
 ---
 <% actionEnum =  'E' + h.capitalize(name) + 'Action' %>
 <% actionType =  h.capitalize(name) + 'ReducerType' %>
