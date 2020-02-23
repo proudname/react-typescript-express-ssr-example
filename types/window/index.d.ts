@@ -1,4 +1,4 @@
-import { AppState } from '@core/common/reducer';
+import { AppState } from '@core/features/reducers';
 
 declare global {
   interface Window {

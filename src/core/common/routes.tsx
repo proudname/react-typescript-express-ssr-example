@@ -2,8 +2,8 @@ import * as React from 'react';
 import { RouteConfig, RouteConfigComponentProps } from 'react-router-config';
 import { unnest } from 'ramda';
 
-import { PreloadAction } from './preload';
-import routes from '@core/routes';
+import { PreloadAction } from '@core/config/preload';
+import routes from '@core/config/routes';
 
 export interface ExtraRouteProps {
   preloadActions?: PreloadAction | PreloadAction[];

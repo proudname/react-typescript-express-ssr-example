@@ -2,7 +2,7 @@ import * as React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import Helmet from 'react-helmet';
 
-import { config } from '@core/common/config';
+import { config } from '@core/config/config';
 
 interface HtmlProps {
   content: string;

@@ -5,10 +5,10 @@ import express from 'express';
 
 import { appRoutes } from '@core/common/routes';
 import { configureStore } from '@core/common/store';
-import { preloadActions } from '@core/common/preload';
+import { preloadActions } from '@core/config/preload';
 
-import { renderApp, renderHtml } from './lib/render';
-import { fillStore, getPreloadActionsFromRoutes } from './lib/utils';
+import { renderApp, renderHtml } from '../lib/render';
+import { fillStore, getPreloadActionsFromRoutes } from '../lib/utils';
 
 export const router = express.Router();
 

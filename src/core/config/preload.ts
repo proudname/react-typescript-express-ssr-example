@@ -1,7 +1,7 @@
 import { ThunkAction } from 'redux-thunk';
 import { AnyAction } from 'redux';
 
-import { AppState } from './reducer';
+import { AppState } from '../features/reducers';
 
 export type PreloadAction<T = {}> = (pathName?: string) => ThunkAction<unknown, AppState, T, AnyAction>;
 

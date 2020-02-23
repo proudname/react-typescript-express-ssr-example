@@ -1,4 +1,4 @@
-import { config } from '@core/common/config';
+import { config } from '@core/config/config';
 
 export function registerServiceWorker() {
   if (!config.isDev && config.isBrowser && 'serviceWorker' in navigator) {

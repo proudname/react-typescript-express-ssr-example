@@ -1,8 +1,8 @@
 import configureStore, { MockStore } from 'redux-mock-store';
 import thunk from 'redux-thunk';
 
-import { PreloadAction } from '@core/common/preload';
-import { AppState } from '@core/common/reducer';
+import { PreloadAction } from '@core/config/preload';
+import { AppState } from '@core/features/reducers';
 
 import { fillStore } from './fillStore';
 

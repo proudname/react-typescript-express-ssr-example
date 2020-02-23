@@ -6,3 +6,10 @@ declare module 'redux' {
     <S, E, R>(asyncAction: ThunkAction<R, S, E, A>): R;
   }
 }
+
+declare global {
+  type ActionReducerType<T, E> = {
+    type: E;
+    payload: T;
+  };
+}

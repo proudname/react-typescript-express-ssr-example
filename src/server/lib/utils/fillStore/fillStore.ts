@@ -1,7 +1,7 @@
 import { Store } from 'redux';
 
-import { PreloadAction } from '@core/common/preload';
-import { AppState } from '@core/common/reducer';
+import { PreloadAction } from '@core/config/preload';
+import { AppState } from '@core/features/reducers';
 
 /**
  * dispatched actions and waiting to fill storage

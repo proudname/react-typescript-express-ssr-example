@@ -10,7 +10,7 @@ import './exitHandler';
 
 import { assetsParser } from './middlewares/assetsParser';
 import { getRequire } from './lib/utils';
-import { router } from './router';
+import { router } from './controllers';
 
 // tslint:disable:no-console
 
@@ -46,7 +46,7 @@ if (!isProduction) {
 app.use(assetsParser(isProduction));
 app.use('/', router);
 
-app.use((err: string, req: express.Request, res: express.Response, next: express.NextFunction) => {
+app.use((err: string, req: express.Request, res: express.Response) => {
   if (!isProduction) {
     return res.status(500).send(err);
   }
@@ -55,5 +55,5 @@ app.use((err: string, req: express.Request, res: express.Response, next: express
 });
 
 app.listen(port, () => {
-  console.info(`!!! Server is running at http://${host}:${port} !!!`);
+  console.info(`Server is running at http://${host}:${port}`);
 });

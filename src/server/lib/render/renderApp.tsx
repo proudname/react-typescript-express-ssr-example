@@ -4,7 +4,7 @@ import { StaticRouter } from 'react-router';
 import { Provider } from 'react-redux';
 import { Store } from 'redux';
 
-import { AppState } from '@core/common/reducer';
+import { AppState } from '@core/features/reducers';
 import { App } from '@core/app';
 
 export const renderApp = (store: Store<AppState>, context?: object, location?: string | object) => {

@@ -4,7 +4,7 @@ import { hydrate, render } from 'react-dom';
 import { Provider } from 'react-redux';
 
 import { App } from '@core/app';
-import { config } from '@core/common/config';
+import { config } from '@core/config/config';
 import { configureStore } from '@core/common/store';
 
 import { registerServiceWorker } from './serviceWorker';
