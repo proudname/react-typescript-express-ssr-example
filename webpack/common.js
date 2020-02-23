@@ -3,6 +3,7 @@ const CircularDependencyPlugin = require('circular-dependency-plugin');
 const nodeExternals = require('webpack-node-externals');
 const merge = require('webpack-merge');
 const webpack = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const { createSelectorName } = require('./utils');
 const paths = require('./paths');
@@ -79,7 +80,8 @@ const common = {
   plugins: [
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     new ForkTsCheckerWebpackPlugin({ tsconfig: paths.tsConfig }),
-    new CircularDependencyPlugin({ exclude: /node_modules/, failOnError: true, cwd: process.cwd() })
+    new CircularDependencyPlugin({ exclude: /node_modules/, failOnError: true, cwd: process.cwd() }),
+    new CopyPlugin([{ from: `${paths.client}/static`, to: paths.dist }])
   ],
   stats: {
     colors: true,
